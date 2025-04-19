@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Scripts/mlruns/721333917538936609/6b31714dd7e94a308475e9c25ace7aac/artifacts
+end_time: 1745046155059
+entry_point_name: ''
+experiment_id: '721333917538936609'
+lifecycle_stage: active
+run_id: 6b31714dd7e94a308475e9c25ace7aac
+run_name: delightful-bug-853
+run_uuid: 6b31714dd7e94a308475e9c25ace7aac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745046152829
+status: 3
+tags: []
+user_id: shashank

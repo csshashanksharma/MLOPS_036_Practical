@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Scripts/mlruns/721333917538936609/f25815c46b7c46c8abd04867aaa48abe/artifacts
+end_time: 1745046152827
+entry_point_name: ''
+experiment_id: '721333917538936609'
+lifecycle_stage: active
+run_id: f25815c46b7c46c8abd04867aaa48abe
+run_name: rare-crow-421
+run_uuid: f25815c46b7c46c8abd04867aaa48abe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745046150715
+status: 3
+tags: []
+user_id: shashank

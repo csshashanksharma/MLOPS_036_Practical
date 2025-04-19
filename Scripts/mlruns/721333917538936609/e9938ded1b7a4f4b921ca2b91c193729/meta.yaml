@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Scripts/mlruns/721333917538936609/e9938ded1b7a4f4b921ca2b91c193729/artifacts
+end_time: 1745046144430
+entry_point_name: ''
+experiment_id: '721333917538936609'
+lifecycle_stage: active
+run_id: e9938ded1b7a4f4b921ca2b91c193729
+run_name: treasured-crab-809
+run_uuid: e9938ded1b7a4f4b921ca2b91c193729
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745046142576
+status: 3
+tags: []
+user_id: shashank

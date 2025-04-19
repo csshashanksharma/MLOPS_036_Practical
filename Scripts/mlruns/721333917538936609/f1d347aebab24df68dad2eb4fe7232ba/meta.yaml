@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Scripts/mlruns/721333917538936609/f1d347aebab24df68dad2eb4fe7232ba/artifacts
+end_time: 1745046148552
+entry_point_name: ''
+experiment_id: '721333917538936609'
+lifecycle_stage: active
+run_id: f1d347aebab24df68dad2eb4fe7232ba
+run_name: silent-boar-335
+run_uuid: f1d347aebab24df68dad2eb4fe7232ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745046146331
+status: 3
+tags: []
+user_id: shashank

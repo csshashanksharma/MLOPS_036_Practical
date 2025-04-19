@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Scripts/mlruns/721333917538936609/12e98e697b2c4927ab56c0590d457015/artifacts
+end_time: 1745046159155
+entry_point_name: ''
+experiment_id: '721333917538936609'
+lifecycle_stage: active
+run_id: 12e98e697b2c4927ab56c0590d457015
+run_name: puzzled-auk-378
+run_uuid: 12e98e697b2c4927ab56c0590d457015
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745046157058
+status: 3
+tags: []
+user_id: shashank
