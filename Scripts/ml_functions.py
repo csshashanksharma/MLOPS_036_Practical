@@ -3,13 +3,23 @@ import pickle
 import pandas as pd
 from xgboost import XGBClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+from dotenv import load_dotenv
 from helper_functions import log_info, log_error
 
-# Define paths
-ARTIFACTS_PATH = "/home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Artifacts"
-os.makedirs(ARTIFACTS_PATH, exist_ok=True)
-MODEL_PATH = os.path.join(ARTIFACTS_PATH, "best_classifier.pkl")
-LABEL_ENCODER_PATH = os.path.join(ARTIFACTS_PATH, "label_encoder.pkl")
+# Load environment variables
+load_dotenv()
+
+# Define base paths dynamically
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+ARTIFACTS_DIR = os.path.join(BASE_DIR, os.getenv('ARTIFACTS_DIR'))
+
+# Ensure Artifacts directory exists
+os.makedirs(ARTIFACTS_DIR, exist_ok=True)
+
+# Define model and artifacts paths
+MODEL_PATH = os.path.join(ARTIFACTS_DIR, "best_classifier.pkl")
+LABEL_ENCODER_PATH = os.path.join(ARTIFACTS_DIR, "label_encoder.pkl")
 
 def training_pipeline(X_train, y_train):
     """

@@ -1,16 +1,27 @@
 import os
 import pandas as pd
+from dotenv import load_dotenv
 from data_processing import create_data_pipeline, save_pipeline, encode_response_variable, split_data
 from ml_functions import training_pipeline, prediction_pipeline, evaluation_matrices
 from helper_functions import log_info, log_error
 
-# Define paths
-DATA_PATH = "/home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Data/raw/loan_risk_data.csv"
-ARTIFACTS_PATH = "/home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Artifacts"
-os.makedirs(ARTIFACTS_PATH, exist_ok=True)
-PIPELINE_PATH = os.path.join(ARTIFACTS_PATH, "data_processing_pipeline.pkl")
-LABEL_ENCODER_PATH = os.path.join(ARTIFACTS_PATH, "label_encoder.pkl")
-MODEL_PATH = os.path.join(ARTIFACTS_PATH, "best_classifier.pkl")
+# Load environment variables
+load_dotenv()
+
+# Define base paths dynamically
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DATA_DIR = os.path.join(BASE_DIR, os.getenv('DATA_DIR'))
+ARTIFACTS_DIR = os.path.join(BASE_DIR, os.getenv('ARTIFACTS_DIR'))
+
+# Specific file paths
+DATA_PATH = os.path.join(DATA_DIR, "raw", "loan_risk_data.csv")
+PIPELINE_PATH = os.path.join(ARTIFACTS_DIR, "data_processing_pipeline.pkl")
+LABEL_ENCODER_PATH = os.path.join(ARTIFACTS_DIR, "label_encoder.pkl")
+MODEL_PATH = os.path.join(ARTIFACTS_DIR, "best_classifier.pkl")
+
+# Ensure Artifacts directory exists
+os.makedirs(ARTIFACTS_DIR, exist_ok=True)
 
 def main():
     log_info("🚀 Starting Data Processing Step")

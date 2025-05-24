@@ -1,10 +1,20 @@
 import logging
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Define base paths dynamically
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+LOGS_DIR = os.path.join(BASE_DIR, os.getenv('LOGS_DIR'))
+
+# Ensure Logs directory exists
+os.makedirs(LOGS_DIR, exist_ok=True)
 
 # Define log file path
-LOG_PATH = "/home/shashank/Desktop/MLOPS_036/MLOPS_036_Practical/Logs"
-os.makedirs(LOG_PATH, exist_ok=True)
-LOG_FILE = os.path.join(LOG_PATH, "mlops_training.log")
+LOG_FILE = os.path.join(LOGS_DIR, "mlops_training.log")
 
 # Configure logging
 logging.basicConfig(
